@@ -34,8 +34,11 @@ const App = () => {
      if (moves === 8) {
       alert('The game has ended!')
      }
+     
   }}
-
+  const resetGame = () => {
+    window.location.reload()
+  }
   return (
     <>
       <h1>Tic Tac Toe</h1>
@@ -49,8 +52,10 @@ const App = () => {
         )
         )}
       </div>
+      <button onClick={resetGame}>Reset Game</button>
+      <footer>Brought To You By PAD</footer>
     </>
   )
 }
 
-export default App;
+export default App
