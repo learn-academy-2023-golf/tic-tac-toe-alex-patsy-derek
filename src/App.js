@@ -5,6 +5,7 @@ import './App.css'
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [player, setPlayer] = useState('X')
+  const [moves, setMoves] = useState(0)
 
   const calculateWinner = (squares) => {
     const lines = [
@@ -27,9 +28,13 @@ const App = () => {
         alert(`Player wins!`)
       } else {
       setPlayer(player === 'X' ? 'O' : 'X')
+      setMoves(moves + 1)
      }
-    }
-  }
+
+     if (moves === 8) {
+      alert('The game has ended!')
+     }
+  }}
 
   return (
     <>
