@@ -4,20 +4,16 @@ import './App.css'
 
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
+  const [player, setPlayer] = useState('X')
 
-  // Function to handle a square click
   const handleSquareClick = (index) => {
-    // Create a copy of the squares array to avoid mutating state directly
-    const newSquares = [...squares]
-    
-    // Check if the square is already filled or if the game is over
-    if (newSquares[index] === null) {
-      // Set the square to 'X' or 'O' based on the current player
-      newSquares[index] = 'X' // You can alternate 'X' and 'O' for each player's turn
-
-      // Update the state with the new squares array
+     if (squares[index] === null) {
+      const newSquares = [...squares]
+      newSquares[index] = player
       setSquares(newSquares)
+      setPlayer(player === 'X' ? 'O' : 'X')
     }
+
   }
 
   return (
@@ -28,7 +24,7 @@ const App = () => {
           <Square
             value={value}
             key={index}
-            onClick={() => handleSquareClick(index)} // Pass the click handler
+            onClick={() => handleSquareClick(index)} 
           />
         )
         )}
