@@ -4,10 +4,33 @@
   border: 1px solid black;
   font-size: 150px;
   text-align: center;
+  background-color: antiquewhite;
 }
 
 .gameBoard {
   display: flex;
   flex-wrap: wrap;
   width: 620px;
+  margin: auto;
+  
+}
+
+h1 {
+  text-align: center;
+  color: lightpink;
+}
+
+html {
+  background-color: brown;
+}
+
+button {
+  background-color: #EEE0CB;
+  display: block;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  color: lightpink;
 }

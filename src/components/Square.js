@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React from 'react'
 
 const Square = (props) => {
   return (
@@ -9,7 +9,7 @@ const Square = (props) => {
     >
       {props.value}
     </div>
-  );
-};
+  )
+}
 
 export default Square;
